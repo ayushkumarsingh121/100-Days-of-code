@@ -29,13 +29,15 @@ let students = [
   { name: "David", marks: 30, subject: "History" }
 ];
 
-
+// By using for...of loop
 for(let student of students){
   if(student.marks >= 50){
     console.log(`${student.name} - ${student.subject}`)
   }
 }
 
+
+// By using for loop
 for(let i=0; i<students.length; i++){
   if(students[i].marks >= 50){
     console.log(`${students[i].name} - ${students[i].subject}`)
