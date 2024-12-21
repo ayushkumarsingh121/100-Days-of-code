@@ -16,17 +16,37 @@
 // Use a loop to collect the numbers.
 // Use the sumNumbers(...args) function to calculate the sum of the numbers using rest
 
-let sumNumbers = (...numbers) => {
-  let sum = 0
-  for(let number of numbers){
-    let user = prompt("Write down the numbers")
-    if(!user.Number()){
-      console.log("Invalid input, Try again")
+// Function to calculate the sum using rest parameters
+
+let sumNumbers = (...args) => {
+  let data = args.reduce((total, ele) => {
+    return total + ele;
+  }, 0);
+  return data;
+};
+
+let collectingNumbers = () => {
+  let arr = [];
+
+  while (true) {
+    let input = prompt("Enter the number");
+
+    if (input === "") {
+      alert("Input collection complete.");
+      break;
     }
-    else{
-      console.log(sum = sum + number)
+
+    let number = Number(input);
+    if (!isNaN(number)) {
+      arr.push(number);
+    } else {
+      alert("Invalid Number. Please try again.");
     }
   }
 
-}
-sumNumbers()
+  let total = sumNumbers(...arr)
+  alert(`total sum of you input : ${total}`)
+  return total
+};
+
+collectingNumbers()
