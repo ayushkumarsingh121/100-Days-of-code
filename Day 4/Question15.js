@@ -23,24 +23,28 @@
 // 1 2 4 5
 // In this example, the loop skips the numbers divisible by 3 and stops once a row contains a number divisible by 7.
 
-
 let pyramid = (userInput) => {
-  for (let i = 0; i < userInput; i++) {
+  if (userInput < 1 || userInput > 10) {
+    console.log("Please enter a number between 1 and 10.");
+    return;
+  }
+
+  for (let i = 1; i <= userInput; i++) {
     let row = "";
-    for (let j = 0; j < i; j++) {
-      if (i % 3 == 0 || j % 3 == 0) {
-        continue; 
+    for (let j = 1; j <= i; j++) {
+      if (j % 3 === 0) {
+        continue;
       }
-      if (i % 7 == 0 || j % 7 == 0) {
-        break; 
+      if (j % 7 === 0) {
+        break;
       }
-      // row += j + " "; // Append j to the current row
+      row += j + " ";
     }
-    // if (row) {
-    //   console.log(row.trim());
-    // }
+    if (row.includes("7")) {
+      break;
+    }
+    console.log(row.trim());
   }
 };
 
-// Call the function
-pyramid(10);
+pyramid(5);
