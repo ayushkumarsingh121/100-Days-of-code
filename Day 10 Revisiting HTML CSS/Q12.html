@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>L0 - Building a Contact Form</title>
+  <style>
+    #container{
+      margin: 50px;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>CONTACT FORM</h1>
+    <form action="#">
+
+      <label for="name">Name: </label>
+      <input type="text" id="name" placeholder="Write your name here">
+      <br><br>
+
+      <label for="email">Email: </label>
+      <input type="email" id="email" placeholder="Write your email address here" >
+      <br><br>
+
+      <label for="gender">Select your gender: </label>
+      <select name="gender" id="gender" required>
+        <option value="">Select...</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <br><br>
+
+      <label for="message">Message: </label>
+      <textarea id="message" placeholder="Write your message here" rows="2" cols="20" ></textarea>
+      <br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
