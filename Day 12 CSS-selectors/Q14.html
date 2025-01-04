@@ -1,0 +1,43 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styling with ID and Universal Selectors</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #main-title {
+      font-size: 32px;
+      color: darkblue;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    #subtitle {
+      font-size: 24px;
+      color: darkgreen;
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    p {
+      padding: 10px;
+      border: 1px solid lightgray;
+      margin: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="main-title">Welcome to My Webpage</h1>
+  <h2 id="subtitle">Learning CSS Selectors</h2>
+  <p>This is the first paragraph with some sample text.</p>
+  <p>This is the second paragraph to demonstrate styling.</p>
+  <p>Here is another paragraph with padding and a border.</p>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Navigation Bar</title>
+    <style>
+      nav {
+        display: flex;
+        justify-content: space-around;
+        background-color: #333;
+        padding: 10px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        font-size: 18px;
+      }
+
+      nav a:hover {
+        color: yellow;
+      }
+
+      nav a:active {
+        color: red;
+      }
+
+      .section1 a {
+        color: lightblue;
+      }
+      .section2 a {
+        color: lightgreen;
+      }
+      .section3 a {
+        color: lightcoral;
+      }
+
+      .section1 > a {
+        font-weight: bold;
+      }
+      .section2 > a {
+        font-style: italic;
+      }
+      .section3 > a {
+        text-transform: uppercase;
+      }
+
+      nav a[href^="https"] {
+        color: gold !important;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="section1">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="https://www.example.com">External Link</a>
+      </div>
+      <div class="section2">
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="https://www.anotherexample.com">Another External Link</a>
+      </div>
+      <div class="section3">
+        <a href="#blog">Blog</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="https://www.thirdexample.com">Third External Link</a>
+      </div>
+    </nav>
+  </body>
+</html>
